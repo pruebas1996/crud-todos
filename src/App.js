@@ -1,22 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import AllContainer from './components/AllContainer';
+import create from './services/create';
+import read from './services/read';
+import update from './services/update';
+import deleteAll from './services/deleteAll';
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <AllContainer create={create} read={read} update={update} deleteAll={deleteAll} />
       </header>
     </div>
   );
